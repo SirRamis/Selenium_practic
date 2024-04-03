@@ -8,7 +8,7 @@ from data import LOGIN, PASSWORD
 from locators import USERNAME_FIELD, PASSWORD_FIELD, LOGIN_BUTTON
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture()
 def driver():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--incognito")
