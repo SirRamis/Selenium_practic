@@ -1,9 +1,7 @@
 import time
 
-USER_NAME = ('xpath', '//*[@id="user-name"]')
-PASSWORD = ('xpath', '//*[@id="password"]')
-LOGIN = ('xpath', '//*[@id="login-button"]')
-TITLE = ('xpath', '//*[@id="header_container"]/div[2]/span')
+from locators import TITLE
+
 
 def test_login(driver):
     actual_text = driver.find_element(*TITLE).text

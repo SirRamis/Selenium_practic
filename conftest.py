@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
-from test import USER_NAME, PASSWORD, LOGIN
+from locators import USER_NAME, PASSWORD, LOGIN
 
 
 @pytest.fixture
