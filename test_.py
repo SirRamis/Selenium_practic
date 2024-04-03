@@ -1,7 +1,5 @@
 import time
 
-import driver as driver
-
 from locators import TITLE, ADDITEM_BUTTON, ITEMINCART_FIELD
 from conftest import driver
 
