@@ -21,3 +21,9 @@ def driver():
     driver.find_element(*LOGIN_BUTTON).click()
     yield driver
     driver.quit()
+
+@pytest.fixture
+def login(driver):
+    driver.find_element(*USERNAME_FIELD).send_keys(LOGIN)
+    driver.find_element(*PASSWORD_FIELD).send_keys(PASSWORD)
+    driver.find_element(*LOGIN_BUTTON).click()
