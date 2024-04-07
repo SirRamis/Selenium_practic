@@ -1,5 +1,3 @@
-
-
 class BasePage:
 
     def __init__(self, driver, url):
@@ -7,4 +5,4 @@ class BasePage:
         self.url = url
 
     def open(self):
-        self.driver.ger(self.url)
+        self.driver.get(self.url)
