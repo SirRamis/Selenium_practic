@@ -2,7 +2,7 @@ import time
 
 from selenium.webdriver.common.by import By
 
-from locators import TITLE, ADDITEM_BUTTON, ITEMINCART_FIELD
+from locators import TITLE, ADDITEM_BUTTON, ITEMINCART_FIELD, CARDS
 
 
 def test_login(driver):
@@ -11,6 +11,11 @@ def test_login(driver):
     assert actual_text == expected_text
     time.sleep(4)
 
+
+def test_login1(driver):
+    cards = driver.find_elements(*CARDS)
+    assert len(cards) == 6
+    time.sleep(4)
 
 def test_add_item(driver):
     driver.find_element(*ADDITEM_BUTTON).click()
