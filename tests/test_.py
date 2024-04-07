@@ -6,7 +6,7 @@ from locators import TITLE, ADDITEM_BUTTON, ITEMINCART_FIELD, CARDS
 from pages.login_page import LoginPage
 from src.urls import Urls
 
-
+f
 class TestLogin:
     url = Urls()
 
