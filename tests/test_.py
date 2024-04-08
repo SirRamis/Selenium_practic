@@ -6,7 +6,7 @@ from locators import TITLE, ADDITEM_BUTTON, ITEMINCART_FIELD, CARDS
 from pages.login_page import LoginPage
 from src.urls import Urls
 
-f
+
 class TestLogin:
     url = Urls()
 
@@ -42,8 +42,7 @@ def test4_deleit_item(driver):
 def test5_added_item_in_cart(driver):
     driver.find_element(By.XPATH, '//*[@id="item_4_img_link"]').click()  # Проходит в карточку
     time.sleep(2)
-    driver.find_element(By.XPATH,
-                        '/html/body/div[1]/div/div/div[2]/div/div/div[2]/button').click()  # Добавляет в карзину из карточки
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[2]/button').click()  # Добавляет в карзину из карточки
     time.sleep(2)
     assert driver.find_elements(By.XPATH, '//*[@id="shopping_cart_container"]/a/span'), 'В корзине нет товаров'
 

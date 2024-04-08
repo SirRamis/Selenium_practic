@@ -7,7 +7,7 @@ class LoginPage(BasePage):
     locators = LoginLocators()
     user = UserData()
     def login(self):
-        self.driver.find_element(self.locators.USER_NAME).send_keys(self.user.standard_user)
-        self.driver.find_element(self.locators.PASSWORD).send_keys(self.user.user.password)
-        self.driver.find_element(self.locators.LOGIN).click
+        self.driver.find_element(*self.locators.USER_NAME).send_keys(self.user.standard_user)
+        self.driver.find_element(*self.locators.PASSWORD).send_keys(self.user.user.password)
+        self.driver.find_element(*self.locators.LOGIN).click
 

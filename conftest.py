@@ -14,9 +14,9 @@ def driver():
     chrome_options.add_argument("--window-size=1440,1080")
     service = Service(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
-    # driver.get('https://www.saucedemo.com/')
-    # driver.find_element(*USERNAME_FIELD).send_keys(LOGIN)
-    # driver.find_element(*PASSWORD_FIELD).send_keys(PASSWORD)
-    # driver.find_element(*LOGIN_BUTTON).click()
+    driver.get('https://www.saucedemo.com/')
+    driver.find_element(*USERNAME_FIELD).send_keys(LOGIN)
+    driver.find_element(*PASSWORD_FIELD).send_keys(PASSWORD)
+    driver.find_element(*LOGIN_BUTTON).click()
     yield driver
     driver.quit()
