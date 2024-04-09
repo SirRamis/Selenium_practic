@@ -50,11 +50,9 @@ def test5_added_item_in_cart(driver):
 def test6_deleit_item_in_cart(driver):
     driver.find_element(By.XPATH, '//*[@id="item_4_img_link"]').click()  # Проходит в карточку
     time.sleep(2)
-    driver.find_element(By.XPATH,
-                        '/html/body/div[1]/div/div/div[2]/div/div/div[2]/button').click()  # Добавляет в карзину из карточки
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[2]/button').click()  # Добавляет в карзину из карточки
     time.sleep(2)
-    driver.find_element(By.XPATH,
-                        '/html/body/div[1]/div/div/div[2]/div/div/div[2]/button').click()  # Удаляет с корзины через карточку товара
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div/div[2]/button').click()  # Удаляет с корзины через карточку товара
     assert not driver.find_elements(By.XPATH, '//*[@id="shopping_cart_container"]/a/span'), 'В корзине есть товары'
     time.sleep(4)
 
@@ -72,6 +70,5 @@ def test7_go_to_card(driver):
 
 
 def test8_go_to_card2(driver):
-    driver.find_element(By.XPATH,
-                        '//*[@id="item_4_title_link"]').click()  # переход к карточке товара после клика по названию товара
+    driver.find_element(By.XPATH, '//*[@id="item_4_title_link"]').click()  # переход к карточке товара после клика по названию товара
     assert driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=4', "Элемент не выбран"
